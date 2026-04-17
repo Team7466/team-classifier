@@ -1,8 +1,12 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Yapılandırma
-API_KEY = 'YOUR_TBA_API_KEY'  # Buraya kendi API anahtarını yapıştır
+API_KEY = os.getenv('TBA_API_KEY')  # Buraya kendi API anahtarını yapıştır
 BASE_URL = 'https://www.thebluealliance.com/api/v3'
 HEADERS = {'X-TBA-Auth-Key': API_KEY}
 
